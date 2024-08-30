@@ -3,7 +3,7 @@
 ToquiButton::ToquiButton(int pin) : pin(pin) {}
 
 void ToquiButton::begin() {
-  pinMode(pin, INPUT);          //Normalmente INPUT_PULLUP, excepto en los pines que no incluyen resistencias pull up, como el 34 y 35 de ESP32, en este caso solo INPUT
+  pinMode(pin, INPUT_PULLUP); //Normalmente INPUT_PULLUP, excepto en los pines que no incluyen resistencias pull up, como el 34 y 35 de ESP32, en este caso solo INPUT
 }
 
 void ToquiButton::setLongClick(uint16_t clickTime){
